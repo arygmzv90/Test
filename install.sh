@@ -24,7 +24,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install yasm libvpx* libx264* li
 sudo DEBIAN_FRONTEND=noninteractive apt-get -yq install libmp3lame-dev libmp3lame0
 
 cd /usr/src
-sudo git clone https://git.ffmpeg.org/ffmpeg.git
+git clone https://git.ffmpeg.org/ffmpeg.git
 
 cd ffmpeg
 ./configure --enable-gpl --enable-libx264 --enable-mmal --enable-omx-rpi --enable-omx --enable-libxcb --enable-libmp3lame --enable-nonfree
