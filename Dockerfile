@@ -2,7 +2,7 @@ FROM fiorix/crosstool-ng-arm
 
 RUN apt-get update
 RUN apt-get install -y git
-RUN apt-get install -y libjpeg-turbo8 libjpeg8 libv4l-0 libv4l-dev libv4l2rds0 libv4lconvert0 libomxil-bellagio-dev apt-get install libomxil-bellagio-bin
+RUN apt-get install -y libjpeg-turbo8 libjpeg8 libv4l-0 libv4l-dev libv4l2rds0 libv4lconvert0 libomxil-bellagio-dev 
 
 RUN curl -s http://tipok.org.ua/downloads/media/aac+/libaacplus/libaacplus-2.0.2.tar.gz | tar -zx -C /usr/src
 WORKDIR /usr/src/libaacplus-2.0.2
