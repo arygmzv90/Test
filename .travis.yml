@@ -10,7 +10,7 @@ before_script:
   - echo ':arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm-static:' | sudo tee -a /proc/sys/fs/binfmt_misc/register
 
 script:
-  - docker build -t arygmzv90/ffmpeg-raspbian .
+  - docker run --rm -i -t -v $PWD:/data sedden/rpi-raspbian-qemu /bin/echo /data/install.sh
 
 after_success: |
   if [ -n "${DOCKER_EMAIL}" ] && [ -n "${DOCKER_TOKEN}" ] && [ "${TRAVIS_PULL_REQUEST}" = 'false' ]
