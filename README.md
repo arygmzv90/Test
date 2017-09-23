@@ -1,5 +1,6 @@
 # Docker with ffmpeg-arm
 FFMPEG with alsa, h264, hardware acceleration and libv4l support. ARM arquitecture 
+Using this https://github.com/fiorix/ffmpeg-arm 
 
 ## Docker pull command
 ```sh
