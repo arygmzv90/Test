@@ -1,3 +1,4 @@
+#/bin/bash
 sudo apt-get install libtool-bin
 mkdir -p "/home/pi/Desktop/sources"
 mkdir -p "/home/pi/Desktop/sources/arm"
