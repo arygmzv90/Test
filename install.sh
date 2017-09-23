@@ -20,7 +20,7 @@ make
 sudo make install
 
 sudo apt-get install git libasound2-dev libav-tools
-sudo apt-get install yasm libvpx. libx264. libxcb.
+sudo apt-get install yasm libvpx* libx264* libxcb*
 sudo apt-get install libmp3lame-dev libmp3lame0
 
 cd /usr/src
