@@ -2,7 +2,7 @@ FROM fiorix/crosstool-ng-arm
 
 RUN apt-get update
 RUN apt-get install -y git
-RUN apt-get install -y libjpeg-turbo8 libjpeg8 libv4l-0 libv4l-dev libv4l2rds0 libv4lconvert0
+RUN apt-get install -y libjpeg-turbo8 libjpeg8 libv4l-0 libv4l-dev libv4l2rds0 libv4lconvert0 libasound2-dev libav-tools libvpx. libx264. libxcb.  libmp3lame-dev libmp3lame0 libomxil-bellagio-dev
 
 RUN curl -s http://tipok.org.ua/downloads/media/aac+/libaacplus/libaacplus-2.0.2.tar.gz | tar -zx -C /usr/src
 WORKDIR /usr/src/libaacplus-2.0.2
@@ -24,7 +24,7 @@ RUN ct-ng-env make install
 
 RUN git clone git://source.ffmpeg.org/ffmpeg.git /usr/src/ffmpeg
 WORKDIR /usr/src/ffmpeg
-RUN ct-ng-env ./configure --enable-cross-compile --cross-prefix='/opt/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-' --arch=armel --target-os=linux --enable-gpl --enable-libx264 --enable-indev=v4l2 --enable-nonfree --extra-cflags="-I/opt/ffmpeg/include" --extra-ldflags="-L/opt/ffmpeg/lib" --extra-libs=-ldl --prefix=/opt/ffmpeg
+RUN ct-ng-env ./configure --enable-cross-compile --cross-prefix='/opt/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-' --arch=armel --target-os=linux --enable-gpl --enable-libx264  --enable-mmal --enable-omx-rpi --enable-omx --enable-libxcb --enable-libmp3lame --enable-indev=v4l2 --enable-nonfree --extra-cflags="-I/opt/ffmpeg/include" --extra-ldflags="-L/opt/ffmpeg/lib" --extra-libs=-ldl --prefix=/opt/ffmpeg
 RUN ct-ng-env make
 RUN ct-ng-env make install
 
