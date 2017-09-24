@@ -17,7 +17,7 @@ RUN ct-ng-env make install
 
 RUN git clone https://github.com/gypified/libmp3lame.git /usr/src/libmp3lame
 WORKDIR /usr/src/libmp3lame
-RUN ct-ng-env ./configure --host=arm-unknown-linux-gnueabi --prefix=/opt/libmp3lame
+RUN ct-ng-env ./configure ./configure --host=arm-unknown-linux-gnueabi --enable-static --cross-prefix='/opt/x-tools/arm-unknown-linux-gnueabi/bin/arm-unknown-linux-gnueabi-' --extra-cflags='-march=armv6' --extra-ldflags='-march=armv6' --prefix=/opt/ffmpeg
 RUN ct-ng-env make
 RUN ct-ng-env make install
 
