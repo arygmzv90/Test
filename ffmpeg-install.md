@@ -1,5 +1,5 @@
 
-#!/bin/bash
+```sh
 sudo apt-get install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libopenjpeg-dev libx264-dev autoconf automake libtool git
 
 git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
@@ -37,3 +37,5 @@ cd ..
 ./configure --prefix=/home/pi/ffmpeg/dependencies/output --enable-gpl --enable-libx264 --enable-nonfree --enable-libfdk_aac --enable-omx --enable-omx-rpi --enable-libv4l2 --extra-cflags="-I/home/pi/ffmpeg/dependencies/output/include" --extra-ldflags="-L/home/pi/ffmpeg/dependencies/output/lib" --extra-libs="-lx264 -lpthread -lm -ldl"
 make -j4
 make install
+
+```
