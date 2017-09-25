@@ -12,7 +12,7 @@ docker pull arygmzv90/ffmpeg-raspbian
 [![Build Status](https://travis-ci.org/arygmzv90/Test.svg?branch=master)](https://travis-ci.org/arygmzv90/Test)
 
 # Compiling FFMPEG into your Raspberry Pi 3
-Configuration guide to install FFMPEG into your Rasperry Pi3 with alsa, mp3, theora, yasm, faac, h264, v4l2 and hardware encoding support.
+Configuration guide to install FFMPEG into your Rasperry Pi3 with alsa, mp3, theora, yasm, faac, h264, v4l2 and hardware encoding/decoding support.
 
 
 ```sh
