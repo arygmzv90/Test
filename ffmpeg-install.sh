@@ -1,4 +1,3 @@
-
 sudo apt-get install build-essential libmp3lame-dev libvorbis-dev libtheora-dev libspeex-dev yasm pkg-config libfaac-dev libopenjpeg-dev libx264-dev autoconf automake libtool git
 
 git clone https://github.com/FFmpeg/FFmpeg.git ffmpeg
