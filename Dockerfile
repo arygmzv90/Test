@@ -1,6 +1,6 @@
 FROM fiorix/crosstool-ng-arm
 
-RUN apt-get updater
+RUN apt-get update
 RUN apt-get install -y git
 
 RUN curl -s ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.4.1.tar.bz2 | tar -jx -C /usr/src
